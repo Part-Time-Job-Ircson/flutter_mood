@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="36px" height="36px" viewBox="0 0 36 36" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 56.3 (81716) - https://sketch.com -->
+    <title>矩形</title>
+    <desc>Created with Sketch.</desc>
+    <g id="微英" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="手机登录" transform="translate(-29.000000, -103.000000)" fill-rule="nonzero">
+            <g id="返回" transform="translate(29.000000, 103.000000)">
+                <rect id="矩形" fill="#000000" opacity="0" x="0" y="0" width="36" height="36"></rect>
+                <path d="M13.8988,18 L25.071,6.8278 C25.6084166,6.27952656 25.6040226,5.40072164 25.0611505,4.8578495 C24.5182784,4.31497736 23.6394734,4.31058345 23.0912,4.848 L10.929,17.01 C10.382332,17.5567227 10.382332,18.4430773 10.929,18.9898 L23.0914,31.152 C23.6396734,31.6894166 24.5184784,31.6850226 25.0613505,31.1421505 C25.6042226,30.5992784 25.6086166,29.7204734 25.0712,29.1722 L13.8988,18 Z" id="路径" fill="#666666"></path>
+            </g>
+        </g>
+    </g>
+</svg>
