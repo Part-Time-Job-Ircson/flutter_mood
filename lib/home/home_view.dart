@@ -88,57 +88,40 @@ class _HomePageState extends State<HomePage> {
                 .toList(),
             onPageChanged: logic.onPageChanged,
           ),
-          Positioned(
-            right: 30.w,
-            top: ScreenUtil().statusBarHeight,
-            child: Column(
-              children: [
-                _buildButton('日历', () => CommonRoute.open(const CalendarPage())),
-                SizedBox(height: 20.w),
-                _buildButton('设置', () => CommonRoute.open(SettingPage())),
-              ],
-            ),
-          ),
           Align(
             alignment: Alignment.topLeft,
-            child: Column(
-              children: [
-                Padding(
-                  padding: EdgeInsets.only(top: kToolbarHeight + 20.w, left: 20.w),
-                  child: Row(
+            child: Padding(
+              padding: EdgeInsets.only(top: kToolbarHeight + 20.w, left: 20.w, right: 20.w),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Row(
                     children: [
-                      Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          TextWidget.oneLine(
-                            text: toTwo(DateTime.now().month) + '/' + toTwo(DateTime.now().day),
-                            fontSize: 25,
-                            color: Colors.white,
-                            fontWeight: FontWeight.w500,
-                          ),
-                          SizedBox(height: 15.w),
-                          TextWidget.oneLine(
-                              text: '${DateTime.now().year}',
-                              fontSize: 30,
-                              color: Colors.white,
-                              fontWeight: FontWeight.w500),
-                        ],
-                      ),
-                      Container(
-                        width: 1.w,
-                        height: 85.w,
-                        color: Colors.white,
-                        margin: EdgeInsets.symmetric(horizontal: 15.w),
-                      ),
-                      TextWidget.moreLine(
-                          text: '周\n${_getWeek(DateTime.now().weekday, prefix: '')}',
+                      Expanded(
+                        child: TextWidget.oneLine(
+                          text: DateTime.now().year.toString() +
+                              '/' +
+                              toTwo(DateTime.now().month) +
+                              '/' +
+                              toTwo(DateTime.now().day),
                           fontSize: 30,
                           color: Colors.white,
-                          fontWeight: FontWeight.w500),
+                          fontWeight: FontWeight.w500,
+                        ),
+                      ),
+                      _buildButton('日历', () => CommonRoute.open(const CalendarPage())),
+                      SizedBox(width: 20.w),
+                      _buildButton('设置', () => CommonRoute.open(SettingPage())),
                     ],
                   ),
-                ),
-              ],
+                  TextWidget.moreLine(
+                    text: '周${_getWeek(DateTime.now().weekday, prefix: '')}',
+                    fontSize: 30,
+                    color: Colors.white,
+                    fontWeight: FontWeight.w500,
+                  ),
+                ],
+              ),
             ),
           ),
           Padding(

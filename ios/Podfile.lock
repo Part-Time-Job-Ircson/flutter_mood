@@ -1,4 +1,50 @@
 PODS:
+  - Ads-CN (5.1.0.7):
+    - Ads-CN/BUAdSDK (= 5.1.0.7)
+  - Ads-CN/BUAdSDK (5.1.0.7):
+    - Ads-CN/Dep_Accurate
+  - Ads-CN/Dep_Accurate (5.1.0.7):
+    - BUAdSDK (= 0.2.0.1)
+    - BURelyFoundation/CSJ (= 0.1.0.17)
+  - BUAdSDK (0.2.0.1):
+    - BUAdSDK/BUAdSDK (= 0.2.0.1)
+  - BUAdSDK/BUAdSDK (0.2.0.1)
+  - BURelyFoundation/AFNetworking (0.1.0.17)
+  - BURelyFoundation/BURelyFoundation (0.1.0.17)
+  - BURelyFoundation/CSJ (0.1.0.17):
+    - BURelyFoundation/AFNetworking
+    - BURelyFoundation/BURelyFoundation
+    - BURelyFoundation/CSJLottie
+    - BURelyFoundation/Foundation
+    - BURelyFoundation/Gecko
+    - BURelyFoundation/HM
+    - BURelyFoundation/NETWork
+    - BURelyFoundation/SDWebImage
+    - BURelyFoundation/Ugen
+    - BURelyFoundation/YYModel
+    - BURelyFoundation/ZFPlayer
+    - BURelyFoundation/Zip
+  - BURelyFoundation/CSJLottie (0.1.0.17)
+  - BURelyFoundation/ELCoreTokenizer (0.1.0.17)
+  - BURelyFoundation/Foundation (0.1.0.17):
+    - BURelyFoundation/NETWork
+  - BURelyFoundation/Gecko (0.1.0.17):
+    - BURelyFoundation/Foundation
+  - BURelyFoundation/HM (0.1.0.17)
+  - BURelyFoundation/NETWork (0.1.0.17):
+    - BURelyFoundation/AFNetworking
+  - BURelyFoundation/SDWebImage (0.1.0.17):
+    - BURelyFoundation/Foundation
+    - BURelyFoundation/ServiceCenter
+  - BURelyFoundation/ServiceCenter (0.1.0.17)
+  - BURelyFoundation/Ugen (0.1.0.17):
+    - BURelyFoundation/ELCoreTokenizer
+  - BURelyFoundation/YYModel (0.1.0.17)
+  - BURelyFoundation/ZFPlayer (0.1.0.17):
+    - BURelyFoundation/Foundation
+    - BURelyFoundation/Zip
+  - BURelyFoundation/Zip (0.1.0.17):
+    - BURelyFoundation/Foundation
   - Flutter (1.0.0)
   - package_info_plus (0.4.5):
     - Flutter
@@ -9,10 +55,17 @@ PODS:
     - Flutter
 
 DEPENDENCIES:
+  - Ads-CN
   - Flutter (from `Flutter`)
   - package_info_plus (from `.symlinks/plugins/package_info_plus/ios`)
   - shared_preferences_foundation (from `.symlinks/plugins/shared_preferences_foundation/ios`)
   - webview_flutter_wkwebview (from `.symlinks/plugins/webview_flutter_wkwebview/ios`)
+
+SPEC REPOS:
+  trunk:
+    - Ads-CN
+    - BUAdSDK
+    - BURelyFoundation
 
 EXTERNAL SOURCES:
   Flutter:
@@ -25,11 +78,14 @@ EXTERNAL SOURCES:
     :path: ".symlinks/plugins/webview_flutter_wkwebview/ios"
 
 SPEC CHECKSUMS:
-  Flutter: 50d75fe2f02b26cc09d224853bb45737f8b3214a
+  Ads-CN: 7f63184d9bd2a1b8dfedf77c1632828e98c00a42
+  BUAdSDK: 002b735289815f703efc9108f66347ac61f1892a
+  BURelyFoundation: 32bdaa57bbbaf5732b55382490c9d2bf0af2f5f4
+  Flutter: f04841e97a9d0b0a8025694d0796dd46242b2854
   package_info_plus: 6c92f08e1f853dc01228d6f553146438dafcd14e
   shared_preferences_foundation: 297b3ebca31b34ec92be11acd7fb0ba932c822ca
   webview_flutter_wkwebview: b7e70ef1ddded7e69c796c7390ee74180182971f
 
-PODFILE CHECKSUM: 8e679eca47255a8ca8067c4c67aab20e64cb974d
+PODFILE CHECKSUM: 9890099b4943bd9cb4704ef33b9f6a8b61fac48d
 
 COCOAPODS: 1.11.2
