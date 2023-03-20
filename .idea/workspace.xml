@@ -5,23 +5,40 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2f680bd9-dd47-4642-b6c2-ffe84e46619e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/ios/Runner/zh-Hans.lproj/LaunchScreen.strings" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/Runner/zh-Hans.lproj/Main.strings" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/svg/专题.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/svg/动漫.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/svg/少儿.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/svg/影评.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/svg/最新韩剧.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/svg/电影.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/svg/电视剧.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/svg/电视直播.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/svg/纪录片.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/svg/经典韩剧.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/svg/综艺.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/film_review/film_review_add.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/film_review/film_review_type.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/film_review/film_review_view.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.flutter-plugins-dependencies" beforeDir="false" afterPath="$PROJECT_DIR$/.flutter-plugins-dependencies" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/flutter_mood.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/flutter_mood.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Flutter/AppFrameworkInfo.plist" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Flutter/AppFrameworkInfo.plist" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ios/Podfile" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Podfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ios/Podfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Podfile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Runner.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Runner.xcodeproj/project.pbxproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ios/Runner/AppDelegate.m" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Runner/AppDelegate.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Runner/Info.plist" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Runner/Info.plist" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/home/home_view.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/home/home_view.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Dart File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -30,6 +47,9 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2MfbJN9eyNdeaUgIQfTvqrqqC4K" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -39,13 +59,17 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="RunOnceActivity.cidr.known.project.marker" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="android.sdk.path" value="$USER_HOME$/Library/Android/sdk" />
     <property name="cidr.known.project.marker" value="true" />
     <property name="dart.analysis.tool.window.visible" value="false" />
     <property name="io.flutter.reload.alreadyRun" value="true" />
     <property name="settings.editor.selected.configurable" value="AndroidSdkUpdater" />
     <property name="show.migrate.to.gradle.popup" value="false" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/assets/svg" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="main.dart" type="FlutterRunConfigurationType" factoryName="Flutter">

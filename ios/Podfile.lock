@@ -6,6 +6,21 @@ PODS:
   - Ads-CN/Dep_Accurate (5.1.0.7):
     - BUAdSDK (= 0.2.0.1)
     - BURelyFoundation/CSJ (= 0.1.0.17)
+  - AFNetworking (4.0.1):
+    - AFNetworking/NSURLSession (= 4.0.1)
+    - AFNetworking/Reachability (= 4.0.1)
+    - AFNetworking/Security (= 4.0.1)
+    - AFNetworking/Serialization (= 4.0.1)
+    - AFNetworking/UIKit (= 4.0.1)
+  - AFNetworking/NSURLSession (4.0.1):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (4.0.1)
+  - AFNetworking/Security (4.0.1)
+  - AFNetworking/Serialization (4.0.1)
+  - AFNetworking/UIKit (4.0.1):
+    - AFNetworking/NSURLSession
   - BUAdSDK (0.2.0.1):
     - BUAdSDK/BUAdSDK (= 0.2.0.1)
   - BUAdSDK/BUAdSDK (0.2.0.1)
@@ -56,6 +71,7 @@ PODS:
 
 DEPENDENCIES:
   - Ads-CN
+  - AFNetworking
   - Flutter (from `Flutter`)
   - package_info_plus (from `.symlinks/plugins/package_info_plus/ios`)
   - shared_preferences_foundation (from `.symlinks/plugins/shared_preferences_foundation/ios`)
@@ -64,6 +80,7 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - Ads-CN
+    - AFNetworking
     - BUAdSDK
     - BURelyFoundation
 
@@ -79,6 +96,7 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   Ads-CN: 7f63184d9bd2a1b8dfedf77c1632828e98c00a42
+  AFNetworking: 3bd23d814e976cd148d7d44c3ab78017b744cd58
   BUAdSDK: 002b735289815f703efc9108f66347ac61f1892a
   BURelyFoundation: 32bdaa57bbbaf5732b55382490c9d2bf0af2f5f4
   Flutter: f04841e97a9d0b0a8025694d0796dd46242b2854
@@ -86,6 +104,6 @@ SPEC CHECKSUMS:
   shared_preferences_foundation: 297b3ebca31b34ec92be11acd7fb0ba932c822ca
   webview_flutter_wkwebview: b7e70ef1ddded7e69c796c7390ee74180182971f
 
-PODFILE CHECKSUM: 9890099b4943bd9cb4704ef33b9f6a8b61fac48d
+PODFILE CHECKSUM: 0090d3ea51a2538e0d2983f05cb31dc0062f2754
 
 COCOAPODS: 1.11.2

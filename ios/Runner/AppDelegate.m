@@ -4,7 +4,7 @@
 #import <AVFoundation/AVFoundation.h>
 #import <AppTrackingTransparency/AppTrackingTransparency.h>
 #import <AdSupport/ASIdentifierManager.h>
-
+#import <AFNetworking/AFNetworking.h>
 @interface AppDelegate ()<BUSplashAdDelegate, BUSplashCardDelegate, BUSplashZoomOutDelegate>
 
 @property (nonatomic, assign) CFTimeInterval startTime;
@@ -13,18 +13,34 @@
 @end
 
 @implementation AppDelegate
+-(BOOL)application:(UIApplication *)application willFinishLaunchingWithOptions:(NSDictionary<UIApplicationLaunchOptionsKey,id> *)launchOptions {
+    BUAdSDKConfiguration *configuration = [BUAdSDKConfiguration configuration];
+    configuration.appID = @"5336122";
+    [self networkMonitoring];
+    return [super application:application willFinishLaunchingWithOptions:launchOptions];
+}
 
 - (BOOL)application:(UIApplication *)application
 didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     [GeneratedPluginRegistrant registerWithRegistry:self];
-    [self setupBUAdSDK];
     return [super application:application didFinishLaunchingWithOptions:launchOptions];
 }
 
+- (void)networkMonitoring {
+    //1.创建网络状态监测管理者
+    AFNetworkReachabilityManager *manger = [AFNetworkReachabilityManager sharedManager];
+    //2.开启监听
+    [manger startMonitoring];
+    //3.监听网络状态的改变
+    [manger setReachabilityStatusChangeBlock:^(AFNetworkReachabilityStatus status) {
+        if (status == AFNetworkReachabilityStatusReachableViaWWAN || AFNetworkReachabilityStatusReachableViaWiFi) {
+            [self setupBUAdSDK];
+        }
+    }];
+}
+
 - (void)setupBUAdSDK {
-    
-    BUAdSDKConfiguration *configuration = [BUAdSDKConfiguration configuration];
-    configuration.appID = @"5336122";
+    [self requestIDFATracking];
     [BUAdSDKManager startWithAsyncCompletionHandler:^(BOOL success, NSError *error) {
         if (success) {
             dispatch_async(dispatch_get_main_queue(), ^{
@@ -32,10 +48,6 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
             });
         }
     }];
-    
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(5.0f * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [self requestIDFATracking];
-    });
 }
 
 - (void)requestIDFATracking {

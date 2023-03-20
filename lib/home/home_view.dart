@@ -2,6 +2,7 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_mood/calendar/calendar_view.dart';
+import 'package:flutter_mood/film_review/film_review_view.dart';
 import 'package:flutter_mood/home/home_logic.dart';
 import 'package:flutter_mood/routers/route.dart';
 import 'package:flutter_mood/setting/setting_view.dart';
@@ -114,11 +115,19 @@ class _HomePageState extends State<HomePage> {
                       _buildButton('设置', () => CommonRoute.open(SettingPage())),
                     ],
                   ),
-                  TextWidget.moreLine(
-                    text: '周${_getWeek(DateTime.now().weekday, prefix: '')}',
-                    fontSize: 30,
-                    color: Colors.white,
-                    fontWeight: FontWeight.w500,
+                  SizedBox(height: 10.w),
+                  Row(
+                    children: [
+                      Expanded(
+                        child: TextWidget.moreLine(
+                          text: '周${_getWeek(DateTime.now().weekday, prefix: '')}',
+                          fontSize: 30,
+                          color: Colors.white,
+                          fontWeight: FontWeight.w500,
+                        ),
+                      ),
+                      _buildButton('影评', () => CommonRoute.open(const FilmReviewPage())),
+                    ],
                   ),
                 ],
               ),
