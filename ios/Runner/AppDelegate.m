@@ -40,7 +40,10 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 }
 
 - (void)setupBUAdSDK {
-    [self requestIDFATracking];
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [self requestIDFATracking];
+    });
+    
     [BUAdSDKManager startWithAsyncCompletionHandler:^(BOOL success, NSError *error) {
         if (success) {
             dispatch_async(dispatch_get_main_queue(), ^{

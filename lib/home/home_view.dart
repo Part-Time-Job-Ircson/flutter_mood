@@ -126,7 +126,7 @@ class _HomePageState extends State<HomePage> {
                           fontWeight: FontWeight.w500,
                         ),
                       ),
-                      _buildButton('影评', () => CommonRoute.open(const FilmReviewPage())),
+                      _buildButton('影剧', () => CommonRoute.open(const FilmReviewPage())),
                     ],
                   ),
                 ],
