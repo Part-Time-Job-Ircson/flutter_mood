@@ -1,32 +1,17 @@
 PODS:
-  - Ads-CN (5.1.0.7):
-    - Ads-CN/BUAdSDK (= 5.1.0.7)
-  - Ads-CN/BUAdSDK (5.1.0.7):
-    - Ads-CN/Dep_Accurate
-  - Ads-CN/Dep_Accurate (5.1.0.7):
+  - Ads-CN-Beta (5.1.0.2):
+    - Ads-CN-Beta/BUAdSDK (= 5.1.0.2)
+  - Ads-CN-Beta/BUAdSDK (5.1.0.2):
+    - Ads-CN-Beta/Dep_Accurate
+  - Ads-CN-Beta/Dep_Accurate (5.1.0.2):
     - BUAdSDK (= 0.2.0.1)
-    - BURelyFoundation/CSJ (= 0.1.0.17)
-  - AFNetworking (4.0.1):
-    - AFNetworking/NSURLSession (= 4.0.1)
-    - AFNetworking/Reachability (= 4.0.1)
-    - AFNetworking/Security (= 4.0.1)
-    - AFNetworking/Serialization (= 4.0.1)
-    - AFNetworking/UIKit (= 4.0.1)
-  - AFNetworking/NSURLSession (4.0.1):
-    - AFNetworking/Reachability
-    - AFNetworking/Security
-    - AFNetworking/Serialization
-  - AFNetworking/Reachability (4.0.1)
-  - AFNetworking/Security (4.0.1)
-  - AFNetworking/Serialization (4.0.1)
-  - AFNetworking/UIKit (4.0.1):
-    - AFNetworking/NSURLSession
+    - BURelyFoundation/CSJ (= 0.1.0.4)
   - BUAdSDK (0.2.0.1):
     - BUAdSDK/BUAdSDK (= 0.2.0.1)
   - BUAdSDK/BUAdSDK (0.2.0.1)
-  - BURelyFoundation/AFNetworking (0.1.0.17)
-  - BURelyFoundation/BURelyFoundation (0.1.0.17)
-  - BURelyFoundation/CSJ (0.1.0.17):
+  - BURelyFoundation/AFNetworking (0.1.0.4)
+  - BURelyFoundation/BURelyFoundation (0.1.0.4)
+  - BURelyFoundation/CSJ (0.1.0.4):
     - BURelyFoundation/AFNetworking
     - BURelyFoundation/BURelyFoundation
     - BURelyFoundation/CSJLottie
@@ -39,28 +24,43 @@ PODS:
     - BURelyFoundation/YYModel
     - BURelyFoundation/ZFPlayer
     - BURelyFoundation/Zip
-  - BURelyFoundation/CSJLottie (0.1.0.17)
-  - BURelyFoundation/ELCoreTokenizer (0.1.0.17)
-  - BURelyFoundation/Foundation (0.1.0.17):
+  - BURelyFoundation/CSJLottie (0.1.0.4)
+  - BURelyFoundation/ELCoreTokenizer (0.1.0.4)
+  - BURelyFoundation/Foundation (0.1.0.4):
     - BURelyFoundation/NETWork
-  - BURelyFoundation/Gecko (0.1.0.17):
+  - BURelyFoundation/Gecko (0.1.0.4):
     - BURelyFoundation/Foundation
-  - BURelyFoundation/HM (0.1.0.17)
-  - BURelyFoundation/NETWork (0.1.0.17):
+  - BURelyFoundation/HM (0.1.0.4)
+  - BURelyFoundation/NETWork (0.1.0.4):
     - BURelyFoundation/AFNetworking
-  - BURelyFoundation/SDWebImage (0.1.0.17):
+  - BURelyFoundation/SDWebImage (0.1.0.4):
     - BURelyFoundation/Foundation
     - BURelyFoundation/ServiceCenter
-  - BURelyFoundation/ServiceCenter (0.1.0.17)
-  - BURelyFoundation/Ugen (0.1.0.17):
+  - BURelyFoundation/ServiceCenter (0.1.0.4)
+  - BURelyFoundation/Ugen (0.1.0.4):
     - BURelyFoundation/ELCoreTokenizer
-  - BURelyFoundation/YYModel (0.1.0.17)
-  - BURelyFoundation/ZFPlayer (0.1.0.17):
+  - BURelyFoundation/YYModel (0.1.0.4)
+  - BURelyFoundation/ZFPlayer (0.1.0.4):
     - BURelyFoundation/Foundation
     - BURelyFoundation/Zip
-  - BURelyFoundation/Zip (0.1.0.17):
+  - BURelyFoundation/Zip (0.1.0.4):
     - BURelyFoundation/Foundation
   - Flutter (1.0.0)
+  - flutter_tencentad (0.0.1):
+    - Flutter
+    - GDTMobSDK (= 4.14.10)
+  - flutter_unionad (0.0.1):
+    - Ads-CN-Beta (= 5.1.0.2)
+    - Flutter
+  - GDTMobSDK (4.14.10):
+    - GDTMobSDK/GDTMobSDK (= 4.14.10)
+  - GDTMobSDK/GDTMobSDK (4.14.10)
+  - gtads (0.0.1):
+    - Flutter
+  - gtads_csj (0.0.1):
+    - Flutter
+  - gtads_ylh (0.0.1):
+    - Flutter
   - package_info_plus (0.4.5):
     - Flutter
   - shared_preferences_foundation (0.0.1):
@@ -70,23 +70,36 @@ PODS:
     - Flutter
 
 DEPENDENCIES:
-  - Ads-CN
-  - AFNetworking
   - Flutter (from `Flutter`)
+  - flutter_tencentad (from `.symlinks/plugins/flutter_tencentad/ios`)
+  - flutter_unionad (from `.symlinks/plugins/flutter_unionad/ios`)
+  - gtads (from `.symlinks/plugins/gtads/ios`)
+  - gtads_csj (from `.symlinks/plugins/gtads_csj/ios`)
+  - gtads_ylh (from `.symlinks/plugins/gtads_ylh/ios`)
   - package_info_plus (from `.symlinks/plugins/package_info_plus/ios`)
   - shared_preferences_foundation (from `.symlinks/plugins/shared_preferences_foundation/ios`)
   - webview_flutter_wkwebview (from `.symlinks/plugins/webview_flutter_wkwebview/ios`)
 
 SPEC REPOS:
   trunk:
-    - Ads-CN
-    - AFNetworking
+    - Ads-CN-Beta
     - BUAdSDK
     - BURelyFoundation
+    - GDTMobSDK
 
 EXTERNAL SOURCES:
   Flutter:
     :path: Flutter
+  flutter_tencentad:
+    :path: ".symlinks/plugins/flutter_tencentad/ios"
+  flutter_unionad:
+    :path: ".symlinks/plugins/flutter_unionad/ios"
+  gtads:
+    :path: ".symlinks/plugins/gtads/ios"
+  gtads_csj:
+    :path: ".symlinks/plugins/gtads_csj/ios"
+  gtads_ylh:
+    :path: ".symlinks/plugins/gtads_ylh/ios"
   package_info_plus:
     :path: ".symlinks/plugins/package_info_plus/ios"
   shared_preferences_foundation:
@@ -95,15 +108,20 @@ EXTERNAL SOURCES:
     :path: ".symlinks/plugins/webview_flutter_wkwebview/ios"
 
 SPEC CHECKSUMS:
-  Ads-CN: 7f63184d9bd2a1b8dfedf77c1632828e98c00a42
-  AFNetworking: 3bd23d814e976cd148d7d44c3ab78017b744cd58
+  Ads-CN-Beta: b23d96ec8ddf9b7e84af035aabd4415ee9cec656
   BUAdSDK: 002b735289815f703efc9108f66347ac61f1892a
-  BURelyFoundation: 32bdaa57bbbaf5732b55382490c9d2bf0af2f5f4
+  BURelyFoundation: e6f458fc5594cac3e3fecc5c43b4172ed344b76b
   Flutter: f04841e97a9d0b0a8025694d0796dd46242b2854
+  flutter_tencentad: ffea545fae35e1b5aeb17fb0a453a7ec629d400b
+  flutter_unionad: 790469a1bcec579b50f7abb3dcd1677c11dbdfc7
+  GDTMobSDK: 1374b9d6066b860e9d90229bd0bd46988227aa00
+  gtads: 1e73e834441d85346f001cdf18341ec2ce7dc0de
+  gtads_csj: 51cf5d02d1270fba19282538f549823478eae80c
+  gtads_ylh: 54174e6a736053c1fcda2a3655aa063f92f9d782
   package_info_plus: 6c92f08e1f853dc01228d6f553146438dafcd14e
   shared_preferences_foundation: 297b3ebca31b34ec92be11acd7fb0ba932c822ca
   webview_flutter_wkwebview: b7e70ef1ddded7e69c796c7390ee74180182971f
 
-PODFILE CHECKSUM: 0090d3ea51a2538e0d2983f05cb31dc0062f2754
+PODFILE CHECKSUM: 23f39b28653561802be748e04544ba4f191ab3f6
 
 COCOAPODS: 1.11.2

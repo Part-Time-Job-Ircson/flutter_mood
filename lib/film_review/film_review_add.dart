@@ -39,10 +39,16 @@ class _FilmReviewAddPageState extends State<FilmReviewAddPage> {
             fontSize: 16,
             textColor: AppColors.textLevelOne,
             onTap: () async {
+              if (logic.type.empty) {
+                Loading.toast('请选择影片类型');
+                return;
+              }
+
               if (_textEditingController.text.empty) {
                 Loading.toast('请输入影评文字信息');
                 return;
               }
+
               List<String> lists = Storage().getList(filmReviewKey);
               lists.add(_textEditingController.text);
               await Storage().setList(filmReviewKey, lists);

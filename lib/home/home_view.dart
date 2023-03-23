@@ -13,6 +13,7 @@ import 'package:flutter_mood/utils/ui/decoration.dart';
 import 'package:flutter_mood/utils/ui/loading.dart';
 import 'package:flutter_mood/utils/ui/slider_indicator.dart';
 import 'package:flutter_mood/utils/ui/text.dart';
+import 'package:flutter_mood/utils/values/ad_utils.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
@@ -34,7 +35,6 @@ class _HomePageState extends State<HomePage> {
   void initState() {
     logic = Get.put(HomeLogic());
     super.initState();
-    // Storage().remove('mood');
   }
 
   String toTwo(int int) {
@@ -126,7 +126,11 @@ class _HomePageState extends State<HomePage> {
                           fontWeight: FontWeight.w500,
                         ),
                       ),
-                      _buildButton('影剧', () => CommonRoute.open(const FilmReviewPage())),
+                      _buildButton('影剧', () {
+                        AdUtils.showRewardAd((bool flag) {
+                          if (flag) CommonRoute.open(const FilmReviewPage());
+                        });
+                      }),
                     ],
                   ),
                 ],
