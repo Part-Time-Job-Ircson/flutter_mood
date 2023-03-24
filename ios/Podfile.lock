@@ -6,6 +6,8 @@ PODS:
   - Ads-CN-Beta/Dep_Accurate (5.1.0.2):
     - BUAdSDK (= 0.2.0.1)
     - BURelyFoundation/CSJ (= 0.1.0.4)
+  - app_tracking_transparency (0.0.1):
+    - Flutter
   - BUAdSDK (0.2.0.1):
     - BUAdSDK/BUAdSDK (= 0.2.0.1)
   - BUAdSDK/BUAdSDK (0.2.0.1)
@@ -70,6 +72,7 @@ PODS:
     - Flutter
 
 DEPENDENCIES:
+  - app_tracking_transparency (from `.symlinks/plugins/app_tracking_transparency/ios`)
   - Flutter (from `Flutter`)
   - flutter_tencentad (from `.symlinks/plugins/flutter_tencentad/ios`)
   - flutter_unionad (from `.symlinks/plugins/flutter_unionad/ios`)
@@ -88,6 +91,8 @@ SPEC REPOS:
     - GDTMobSDK
 
 EXTERNAL SOURCES:
+  app_tracking_transparency:
+    :path: ".symlinks/plugins/app_tracking_transparency/ios"
   Flutter:
     :path: Flutter
   flutter_tencentad:
@@ -109,6 +114,7 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   Ads-CN-Beta: b23d96ec8ddf9b7e84af035aabd4415ee9cec656
+  app_tracking_transparency: 5b1745ef9ade815f7455cb6a0848349589afb7c5
   BUAdSDK: 002b735289815f703efc9108f66347ac61f1892a
   BURelyFoundation: e6f458fc5594cac3e3fecc5c43b4172ed344b76b
   Flutter: f04841e97a9d0b0a8025694d0796dd46242b2854

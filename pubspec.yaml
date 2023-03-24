@@ -46,6 +46,8 @@ dependencies:
   gtads: ^1.2.0
   gtads_csj: ^1.2.1
   gtads_ylh: ^1.2.1
+  app_tracking_transparency: ^2.0.3
+  flutter_smart_dialog: ^4.9.0+4
 
 dev_dependencies:
   flutter_test:

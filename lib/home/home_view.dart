@@ -10,6 +10,7 @@ import 'package:flutter_mood/utils/storage.dart';
 import 'package:flutter_mood/utils/ui/base_scaffold.dart';
 import 'package:flutter_mood/utils/ui/button.dart';
 import 'package:flutter_mood/utils/ui/decoration.dart';
+import 'package:flutter_mood/utils/ui/dialog.dart';
 import 'package:flutter_mood/utils/ui/loading.dart';
 import 'package:flutter_mood/utils/ui/slider_indicator.dart';
 import 'package:flutter_mood/utils/ui/text.dart';
@@ -127,9 +128,14 @@ class _HomePageState extends State<HomePage> {
                         ),
                       ),
                       _buildButton('影剧', () {
-                        AdUtils.showRewardAd((bool flag) {
-                          if (flag) CommonRoute.open(const FilmReviewPage());
-                        });
+                        CommonDialog.twoButton(
+                          description: '观看广告后可发表影评',
+                          onConfirm: () {
+                            AdUtils.showRewardAd((bool flag) {
+                              if (flag) CommonRoute.open(const FilmReviewPage());
+                            });
+                          },
+                        );
                       }),
                     ],
                   ),

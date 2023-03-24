@@ -2,6 +2,9 @@ import 'package:flutter/material.dart';
 
 /// 应用颜色
 class AppColors {
+  /// 主题色
+  static const Color primary = Color(0XFFEDCC6C);
+
   /// 文字颜色
   static const Color black = Colors.black;
   static const Color white = Colors.white;
