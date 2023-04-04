@@ -38,7 +38,6 @@ dependencies:
   shared_preferences: ^2.0.17
   flutter_svg: ^1.0.3
   package_info_plus: ^1.4.2
-  webview_flutter: ^3.0.4
   intl: ^0.18.0
   flutter_screenutil: ^5.6.1
   table_calendar: ^3.0.9
@@ -48,6 +47,9 @@ dependencies:
   gtads_ylh: ^1.2.1
   app_tracking_transparency: ^2.0.3
   flutter_smart_dialog: ^4.9.0+4
+  dio: ^5.1.1
+  webview_flutter: ^4.0.7
+  url_launcher: ^6.1.10
 
 dev_dependencies:
   flutter_test:

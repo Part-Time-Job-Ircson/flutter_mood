@@ -68,6 +68,8 @@ PODS:
   - shared_preferences_foundation (0.0.1):
     - Flutter
     - FlutterMacOS
+  - url_launcher_ios (0.0.1):
+    - Flutter
   - webview_flutter_wkwebview (0.0.1):
     - Flutter
 
@@ -81,6 +83,7 @@ DEPENDENCIES:
   - gtads_ylh (from `.symlinks/plugins/gtads_ylh/ios`)
   - package_info_plus (from `.symlinks/plugins/package_info_plus/ios`)
   - shared_preferences_foundation (from `.symlinks/plugins/shared_preferences_foundation/ios`)
+  - url_launcher_ios (from `.symlinks/plugins/url_launcher_ios/ios`)
   - webview_flutter_wkwebview (from `.symlinks/plugins/webview_flutter_wkwebview/ios`)
 
 SPEC REPOS:
@@ -109,6 +112,8 @@ EXTERNAL SOURCES:
     :path: ".symlinks/plugins/package_info_plus/ios"
   shared_preferences_foundation:
     :path: ".symlinks/plugins/shared_preferences_foundation/ios"
+  url_launcher_ios:
+    :path: ".symlinks/plugins/url_launcher_ios/ios"
   webview_flutter_wkwebview:
     :path: ".symlinks/plugins/webview_flutter_wkwebview/ios"
 
@@ -126,7 +131,8 @@ SPEC CHECKSUMS:
   gtads_ylh: 54174e6a736053c1fcda2a3655aa063f92f9d782
   package_info_plus: 6c92f08e1f853dc01228d6f553146438dafcd14e
   shared_preferences_foundation: 297b3ebca31b34ec92be11acd7fb0ba932c822ca
-  webview_flutter_wkwebview: b7e70ef1ddded7e69c796c7390ee74180182971f
+  url_launcher_ios: 08a3dfac5fb39e8759aeb0abbd5d9480f30fc8b4
+  webview_flutter_wkwebview: 2e2d318f21a5e036e2c3f26171342e95908bd60a
 
 PODFILE CHECKSUM: 23f39b28653561802be748e04544ba4f191ab3f6
 

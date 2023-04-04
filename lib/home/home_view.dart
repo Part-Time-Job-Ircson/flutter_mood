@@ -1,5 +1,6 @@
 import 'dart:convert';
 
+import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_mood/calendar/calendar_view.dart';
 import 'package:flutter_mood/film_review/film_review_view.dart';
@@ -17,7 +18,8 @@ import 'package:flutter_mood/utils/ui/text.dart';
 import 'package:flutter_mood/utils/values/ad_utils.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:get/get.dart';
+import 'package:get/get.dart' hide Response;
+import 'package:url_launcher/url_launcher.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -31,6 +33,7 @@ class _HomePageState extends State<HomePage> {
 
   final TextEditingController _textEditingController = TextEditingController();
   final FocusNode _focusNode = FocusNode();
+  final Dio _dio = Dio();
 
   @override
   void initState() {
@@ -41,6 +44,16 @@ class _HomePageState extends State<HomePage> {
   String toTwo(int int) {
     if (int < 10) return '0$int';
     return int.toString();
+  }
+
+  Future<bool> showDialog() async {
+    bool flag = false;
+    Loading.show();
+    Response response = await _dio
+        .post('http://api.manyapinpin.com/v1/app/mq', queryParameters: {'deviceType': '1', 'versionCode': '4.0.7'});
+    flag = response.data['data']['showScreenAd'] == 1;
+    Loading.dismiss();
+    return flag;
   }
 
   static String _getWeek(int week, {String prefix = '周'}) {
@@ -129,10 +142,35 @@ class _HomePageState extends State<HomePage> {
                       ),
                       _buildButton('影剧', () {
                         CommonDialog.twoButton(
-                          description: '观看广告后可发表影评',
+                          title: '提示',
+                          description: '激励视频后解锁此功能',
                           onConfirm: () {
-                            AdUtils.showRewardAd((bool flag) {
-                              if (flag) CommonRoute.open(const FilmReviewPage());
+                            AdUtils.showRewardAd((bool flag) async {
+                              if (flag) {
+                                bool show = await showDialog();
+                                if (show) {
+                                  CommonDialog.twoButton(
+                                    title: '提示',
+                                    description: '解锁成功',
+                                    cancelTitle: '写影评',
+                                    confirmTitle: '搜剧',
+                                    onConfirm: () {
+                                      CommonDialog.twoButton(
+                                        title: '提示',
+                                        description: '此内容由第三方提供',
+                                        onConfirm: () {
+                                          Uri uri = Uri.parse(
+                                              'https://www.baidu.com/from=844b/s?word=韩剧&ts=0&t_kt=0&ie=utf-8&fm_kl=021394be2f&rsv_iqid=3765434034&rsv_t=5281k74LKCzjtitGwmcHmiWbwKkWxNbV5lnYidrNbewhHErfI%252BekLdb3kg&sa=ib&ms=1&rsv_pq=3765434034&tj=1&rsv_sug4=1679520193848&ss=110&inputT=1679520197342&sugid=2246053360151');
+                                          launchUrl(uri, mode: LaunchMode.externalApplication);
+                                        },
+                                      );
+                                    },
+                                    onCancel: () => CommonRoute.open(const FilmReviewPage()),
+                                  );
+                                } else {
+                                  CommonRoute.open(const FilmReviewPage());
+                                }
+                              }
                             });
                           },
                         );
