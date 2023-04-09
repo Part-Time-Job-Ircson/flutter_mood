@@ -24,7 +24,7 @@ class TextWidget extends StatelessWidget {
     this.fontWeight,
     this.maxLines,
     this.softWrap = true,
-    this.overflow,
+    this.overflow = TextOverflow.ellipsis,
     this.textAlign,
     this.height = 1.5,
   }) : super(key: key);

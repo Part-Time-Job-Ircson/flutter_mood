@@ -33,10 +33,29 @@ class AdUtils {
     GTAdsCode(alias: ylhAlias, probability: 5, androidId: ylhAndroidRewardKey, iosId: ylhIosRewardKey),
   ];
 
+  static List<GTAdsCode> rewardAd1 = [
+    GTAdsCode(alias: ylhAlias, probability: 5, androidId: '7095933526633342', iosId: '7095933526633342'),
+  ];
+
   static Future showRewardAd(ValueChanged<bool> onVerify) async {
     bool isFinish = false;
     await GTAds.rewardAd(
       codes: rewardAd,
+      //超时时间 当广告失败后会依次重试其他广告 直至所有广告均加载失败 设置超时时间可提前取消
+      timeout: rewardTimeout,
+      callBack: GTAdsCallBack(
+        onVerify: (code, verify, transId, rewardName, rewardAmount) {
+          isFinish = verify;
+        },
+        onClose: (_) => onVerify(isFinish),
+      ),
+    );
+  }
+
+  static Future showRewardAd1(ValueChanged<bool> onVerify) async {
+    bool isFinish = false;
+    await GTAds.rewardAd(
+      codes: rewardAd1,
       //超时时间 当广告失败后会依次重试其他广告 直至所有广告均加载失败 设置超时时间可提前取消
       timeout: rewardTimeout,
       callBack: GTAdsCallBack(

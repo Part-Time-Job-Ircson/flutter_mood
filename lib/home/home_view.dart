@@ -3,6 +3,7 @@ import 'dart:convert';
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_mood/calendar/calendar_view.dart';
+import 'package:flutter_mood/drama/drama_view.dart';
 import 'package:flutter_mood/film_review/film_review_view.dart';
 import 'package:flutter_mood/home/home_logic.dart';
 import 'package:flutter_mood/routers/route.dart';
@@ -140,6 +141,42 @@ class _HomePageState extends State<HomePage> {
                           fontWeight: FontWeight.w500,
                         ),
                       ),
+                      _buildButton('韩剧推荐', () {
+                        CommonDialog.twoButton(
+                          title: '提示',
+                          description: '激励视频后解锁此功能',
+                          onConfirm: () {
+                            AdUtils.showRewardAd1((bool flag) async {
+                              if (flag) {
+                                bool show = await showDialog();
+                                if (show) {
+                                  CommonDialog.twoButton(
+                                    title: '提示',
+                                    description: '解锁成功',
+                                    cancelTitle: '推荐',
+                                    confirmTitle: '搜剧',
+                                    onConfirm: () {
+                                      CommonDialog.twoButton(
+                                        title: '提示',
+                                        description: '此内容由第三方提供',
+                                        onConfirm: () {
+                                          Uri uri = Uri.parse(
+                                              'https://www.baidu.com/from=844b/s?word=韩剧&ts=0&t_kt=0&ie=utf-8&fm_kl=021394be2f&rsv_iqid=3765434034&rsv_t=5281k74LKCzjtitGwmcHmiWbwKkWxNbV5lnYidrNbewhHErfI%252BekLdb3kg&sa=ib&ms=1&rsv_pq=3765434034&tj=1&rsv_sug4=1679520193848&ss=110&inputT=1679520197342&sugid=2246053360151');
+                                          launchUrl(uri, mode: LaunchMode.externalApplication);
+                                        },
+                                      );
+                                    },
+                                    onCancel: () => CommonRoute.open(DramaPage()),
+                                  );
+                                } else {
+                                  CommonRoute.open(DramaPage());
+                                }
+                              }
+                            });
+                          },
+                        );
+                      }),
+                      SizedBox(width: 20.w),
                       _buildButton('影剧', () {
                         CommonDialog.twoButton(
                           title: '提示',
